@@ -112,6 +112,10 @@
     (treemacs-create-icon :icon (format "%s%s" (emacs-nerd-icons-faicon "nf-fa-briefcase"   :face 'treemacs-emacs-nerd-icons-file-face) treemacs-emacs-nerd-icons-tab)
                           :extensions (briefcase)
                           :fallback 'same-as-icon)
+
+    (treemacs-create-icon :icon (format " %s%s" (emacs-nerd-icons-faicon "nf-fa-file_o" :face 'treemacs-nerd-icons-file-face) treemacs-nerd-icons-tab)
+                          :extensions (fallback)
+                          :fallback 'same-as-icon)
     ))
 
 (provide 'treemacs-nerd-icons)
