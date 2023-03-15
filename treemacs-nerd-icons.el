@@ -52,7 +52,8 @@
             (plist (nthcdr 3 item)))
         (treemacs-create-icon
          :icon (format "  %s%s" (apply fn key plist) treemacs-emacs-nerd-icons-tab)
-         :extensions extensions)))
+         :extensions extensions
+         :fallback 'same-as-icon)))
     
     ;; directory and other icons
     (treemacs-create-icon :icon (format "%s%s" (emacs-nerd-icons-octicon "nf-oct-repo"   :face 'treemacs-emacs-nerd-icons-root-face) treemacs-emacs-nerd-icons-tab)
