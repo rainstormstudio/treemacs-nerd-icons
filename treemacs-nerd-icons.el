@@ -29,12 +29,12 @@
 (require 'treemacs)
 
 (defface treemacs-emacs-nerd-icons-root-face
-  '((t (:inherit font-lock-string-face)))
+  '((t (:inherit emacs-nerd-icons-dorange)))
   "Face used for the root icon in emacs-nerd-icons theme."
   :group 'treemacs-faces)
 
 (defface treemacs-emacs-nerd-icons-file-face
-  '((t (:inherit font-lock-doc-face)))
+  '((t (:inherit emacs-nerd-icons-orange)))
   "Face used for the directory and file icons in emacs-nerd-icons theme."
   :group 'treemacs-faces)
 
