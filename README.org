@@ -3,6 +3,8 @@
 
 [[https://github.com/rainstormstudio/emacs-nerd-icons][emacs-nerd-icons]] theme for treemacs. It is inspired by [[https://github.com/Alexander-Miller/treemacs/blob/master/src/extra/treemacs-all-the-icons.el][treemacs-all-the-icons]], [[https://github.com/ryanoasis/vim-devicons][vim-devicons]] and [[https://github.com/nvim-tree/nvim-web-devicons][nvim-web-devicons]]. It can be used inside GUI or terminal.
 
+[[file:screenshots/demo.png]]
+
 * Prerequisite
 You need a Nerd Font installed, and set your terminal font as a Nerd Font if you want terminal icons working.
 
