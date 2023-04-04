@@ -119,8 +119,7 @@
 
                          (treemacs-create-icon :icon (format "  %s%s" (nerd-icons-faicon "nf-fa-file_o" :face 'treemacs-nerd-icons-file-face) treemacs-nerd-icons-tab)
                                                :extensions (fallback)
-                                               :fallback 'same-as-icon)
-                         ))
+                                               :fallback 'same-as-icon)))
 
 (provide 'treemacs-nerd-icons)
 ;;; treemacs-nerd-icons.el ends here
