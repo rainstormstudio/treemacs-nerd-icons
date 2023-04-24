@@ -5,7 +5,7 @@
 ;; Author: Hongyu Ding <rainstormstudio@yahoo.com>
 ;; Keywords: lisp
 ;; Version: 0.0.1
-;; Package-Requires: ((emacs "24.3") (nerd-icons "0.0.1"))
+;; Package-Requires: ((emacs "24.3") (nerd-icons "0.0.1") (treemacs "0.0"))
 ;; URL: https://github.com/rainstormstudio/treemacs-nerd-icons
 ;; Keywords: files, icons, treemacs
 
