@@ -49,14 +49,17 @@
                        :config
                        (progn
                          (dolist (item nerd-icons-extension-icon-alist)
-                           (let ((extensions (list (nth 0 item)))
-                                 (fn (nth 1 item))
-                                 (key (nth 2 item))
-                                 (plist (nthcdr 3 item)))
-                             (treemacs-create-icon
-                              :icon (format "  %s%s" (apply fn key plist) treemacs-nerd-icons-tab)
-                              :extensions extensions
-                              :fallback 'same-as-icon)))
+                           (let* ((extension (car item))
+                                  (func (cadr item))
+                                  (args (append (list (cadr (cdr item))) '(:v-adjust -0.05 :height 1.0) (cdr (cddr item))))
+                                  (icon (apply func args)))
+                             (let* ((icon-pair (cons (format " %s%s%s" treemacs-nerd-icons-tab icon treemacs-nerd-icons-tab) (format " %s%s%s" treemacs-nerd-icons-tab icon treemacs-nerd-icons-tab)))
+                                    (gui-icons (treemacs-theme->gui-icons treemacs--current-theme))
+                                    (tui-icons (treemacs-theme->tui-icons treemacs--current-theme))
+                                    (gui-icon  (car icon-pair))
+                                    (tui-icon  (cdr icon-pair)))
+                               (ht-set! gui-icons extension gui-icon)
+                               (ht-set! tui-icons extension tui-icon))))
                          
                          ;; directory and other icons
                          (treemacs-create-icon :icon (format "%s%s" (nerd-icons-octicon "nf-oct-repo"   :face 'treemacs-nerd-icons-root-face) treemacs-nerd-icons-tab)
