@@ -1,6 +1,8 @@
 #+TITLE: treemacs-nerd-icons
 #+AUTHOR: Hongyu Ding
 
+[[https://melpa.org/#/treemacs-nerd-icons][file:https://melpa.org/packages/treemacs-nerd-icons-badge.svg]]
+
 [[https://github.com/rainstormstudio/nerd-icons.el][nerd-icons]] theme for treemacs. It is inspired by [[https://github.com/Alexander-Miller/treemacs/blob/master/src/extra/treemacs-all-the-icons.el][treemacs-all-the-icons]], [[https://github.com/ryanoasis/vim-devicons][vim-devicons]] and [[https://github.com/nvim-tree/nvim-web-devicons][nvim-web-devicons]]. It can be used inside GUI or terminal.
 
 [[file:screenshots/demo.png]]
@@ -11,11 +13,9 @@ You need a Nerd Font installed, and set your terminal font as a Nerd Font if you
 You should include [[https://github.com/rainstormstudio/nerd-icons.el][nerd-icons]] before using this package.
 
 * Installation
-Currently this is github only so please use a package manager that supports github repo.
+with ~use-package~
 #+BEGIN_SRC elisp
   (use-package treemacs-nerd-icons
-    :straight (treemacs-nerd-icons
-               :type git :host github :repo "rainstormstudio/treemacs-nerd-icons")
     :config
     (treemacs-load-theme "nerd-icons"))
 #+END_SRC
