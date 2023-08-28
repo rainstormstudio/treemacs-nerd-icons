@@ -41,9 +41,7 @@
   "Face used for the directory and file icons in nerd-icons theme."
   :group 'treemacs-faces)
 
-(defvar treemacs-nerd-icons-tab (if (bound-and-true-p treemacs-nerd-icons-tab-font)
-                                    (propertize "\t" 'face `((:family ,treemacs-nerd-icons-tab-font)))
-                                  "\t"))
+(defvar treemacs-nerd-icons-tab (propertize "\t" :face 'treemacs-nerd-icons-file-face))
 
 (treemacs-create-theme "nerd-icons"
                        :config
@@ -138,7 +136,7 @@
                                                :extensions (briefcase)
                                                :fallback 'same-as-icon)
 
-                         (treemacs-create-icon :icon (format "  %s%s" (nerd-icons-faicon "nf-fa-file_o" :face 'treemacs-nerd-icons-file-face) treemacs-nerd-icons-tab)
+                         (treemacs-create-icon :icon (format " %s%s%s" treemacs-nerd-icons-tab (nerd-icons-faicon "nf-fa-file_o" :face 'treemacs-nerd-icons-file-face) treemacs-nerd-icons-tab)
                                                :extensions (fallback)
                                                :fallback 'same-as-icon)))
 
