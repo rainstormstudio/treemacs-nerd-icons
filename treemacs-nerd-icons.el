@@ -100,7 +100,7 @@
                                                :extensions ("git-closed")
                                                :fallback 'same-as-icon)
                          (treemacs-create-icon :icon (format "%s%s%s%s" (nerd-icons-octicon "nf-oct-chevron_down"   :face 'treemacs-nerd-icons-file-face) treemacs-nerd-icons-tab (nerd-icons-faicon "nf-fa-folder_open"  :face 'treemacs-nerd-icons-file-face) treemacs-nerd-icons-tab)
-                                               :extensions ("gihub-open")
+                                               :extensions ("github-open")
                                                :fallback 'same-as-icon)
                          (treemacs-create-icon :icon (format "%s%s%s%s" (nerd-icons-octicon "nf-oct-chevron_right"   :face 'treemacs-nerd-icons-file-face) treemacs-nerd-icons-tab (nerd-icons-faicon "nf-fa-folder"  :face 'treemacs-nerd-icons-file-face) treemacs-nerd-icons-tab)
                                                :extensions ("github-closed")
