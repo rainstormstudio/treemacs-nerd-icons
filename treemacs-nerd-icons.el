@@ -41,6 +41,11 @@
   "Face used for the directory and file icons in nerd-icons theme."
   :group 'treemacs-faces)
 
+(defcustom treemacs-nerd-icons-icon-size 1.0
+  "The default icon size in treemacs."
+  :group 'nerd-icons-completion
+  :type 'float)
+
 (defvar treemacs-nerd-icons-tab (propertize "\t" :face 'treemacs-nerd-icons-file-face))
 
 (treemacs-create-theme "nerd-icons"
@@ -49,7 +54,7 @@
     (dolist (item nerd-icons-extension-icon-alist)
       (let* ((extension (car item))
              (func (cadr item))
-             (args (append (list (cadr (cdr item))) '(:v-adjust -0.05 :height 1.0) (cdr (cddr item))))
+             (args (append (list (cadr (cdr item))) `(:v-adjust 0.0 :height ,treemacs-nerd-icons-icon-size) (cdr (cddr item))))
              (icon (apply func args)))
         (let* ((icon-pair (cons (format " %s%s%s" treemacs-nerd-icons-tab icon treemacs-nerd-icons-tab) (format " %s%s%s" treemacs-nerd-icons-tab icon treemacs-nerd-icons-tab)))
                (gui-icons (treemacs-theme->gui-icons treemacs--current-theme))
