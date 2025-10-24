@@ -17,12 +17,12 @@ with ~use-package~
 #+BEGIN_SRC elisp
   (use-package treemacs-nerd-icons
     :config
-    (treemacs-load-theme "nerd-icons"))
+    (treemacs-nerd-icons-config))
 #+END_SRC
 
 You can also download the ~treemacs-nerd-icons.el~ file and load it to the path, then simply
 #+BEGIN_SRC elisp
   (require 'treemacs-nerd-icons)
-  (treemacs-load-theme "nerd-icons")
+  (treemacs-nerd-icons-config)
 #+END_SRC
 
